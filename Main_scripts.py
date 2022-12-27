@@ -73,4 +73,3 @@ def delete_rus_users():
     except:
         print("Executed incorrectly: answer 0")
 
-delete_rus_users()
