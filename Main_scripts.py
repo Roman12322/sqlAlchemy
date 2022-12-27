@@ -60,3 +60,17 @@ def get_usa_users():
     for user in results:
         usa_users.append(user)
     return usa_users
+
+def delete_rus_users():
+    try:
+        Session = sessionmaker()
+        session = Session()
+        rus_users = session.query(Users_dns)\
+            .filter(Users_dns.country == 'Russia')
+        session.delete(rus_users)
+        session.commit()
+        print("Executed correctly: answer 1")
+    except:
+        print("Executed incorrectly: answer 0")
+
+delete_rus_users()
