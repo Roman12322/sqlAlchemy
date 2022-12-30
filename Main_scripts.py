@@ -11,6 +11,7 @@ class Users_dns(Base):
     gender = Column("gender", String(1), nullable=False)
     country = Column("country", String(50), nullable=False)
     city = Column("city", String(100), nullable=False)
+
     # Table initializing
     def __init__(self, username, gender, country, city):
         self.username = username
@@ -92,8 +93,8 @@ def specify_russia_name():
     except:
         return 0
 
-insert_user('Roman', 'm', 'Russia', 'Moscow')
-specify_russia_name()
-print(get_all_users())
+# insert_user('Roman', 'm', 'Russia', 'Moscow')
+# specify_russia_name()
+# print(get_all_users())
 
 
